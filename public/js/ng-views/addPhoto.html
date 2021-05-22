@@ -1,0 +1,44 @@
+<navigate></navigate>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Add to the World of SnapMap</h1>
+      <form name="addPhoto" ng-submit="vm.onSubmitPhoto()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': addPhoto.name.$invalid && !addPhoto.name.$pristine }">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" ng-model="vm.newMarker.user" required>
+          <p ng-show="addPhoto.name.$invalid && !addPhoto.name.$pristine" class="help-block">Your name is required.</p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : addPhoto.photourl.$invalid && !addPhoto.photourl.$pristine }">
+          <label for="photourl">Photo Url <a class="coord" href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank"><small>What is a Photo URL?</small></a></label>
+          <input type="text" name="photourl" class="form-control" id="photourl" placeholder="Enter the Photo Url" ng-model="vm.newMarker.imageurl" ng-minlength="10" required>
+          <p ng-show="addPhoto.photourl.$error.minlength" class="help-block">Please Enter a Valid Photo URL!</p>
+        </div>
+        <div class="form-group">
+          <label for="latitude">Latitude <a class="coord" href="http://www.latlong.net/" target="_blank"><small>Find Latitude</small></a></label>
+          <input type="text" class="form-control" id="latitude" placeholder="Enter Latitude" ng-model="vm.newMarker.lat" required>
+        </div>
+        <div class="form-group">
+          <label for="longitude">Longitude <a class="coord" href="http://www.latlong.net/" target="_blank"><small>Find Longitude</small></a></label>
+          <input type="text" class="form-control" id="longitude" placeholder="Enter Longitude" ng-model="vm.newMarker.lng" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': addPhoto.blurb.$invalid && !addPhoto.blurb.$pristine }">
+          <label for="blurb">Blurb</label>
+          <input type="text" name="blurb" class="form-control" id="blurb" placeholder="Enter a Brief Description" ng-model="vm.newMarker.desc" ng-minlength="5" required>
+          <p ng-show="addPhoto.blurb.$error.minlength" class="help-block">At least enter Hello! #Khoifish</p>
+        </div>
+        <button type="submit" ng-disabled="addPhoto.$invalid" class="btn btn-default">Post Your Picture!</button>
+      </form>
+    </div>
+    <div class="col-md-1"> </div>
+    <div class="col-md-5">
+      <div class="cameragirl">
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

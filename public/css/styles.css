@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#map {
+  margin-top:-20px;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+}
+
+.controls {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 29px;
+  margin-left: 12px;
+  margin-top: 10px;
+  outline: none;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+  z-index: 3;
+  position: absolute;
+}
+.controls:focus {
+  border-color: #FFD452;
+}
+
+.landingphoto{
+  margin-top:-39.5px;
+  height: 500px;
+  width: 100%;
+  background: transparent url("https://s15.postimg.org/p7z1r2qe3/Taking_Pictures_with_i_Phone_4k.jpg") no-repeat top center fixed;
+  color: white;
+  text-shadow: #444 0 1px 1px;
+  border-radius: 5px;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.cameragirl{
+  margin-top:20px;
+  background: transparent url("https://s12.postimg.org/wxdep2c7h/girlholdingcamera.jpg") no-repeat  ;
+  height:550px;
+  width:100%;
+  border-radius: 5px;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+}
