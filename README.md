@@ -1,1 +1,1 @@
-# SnapMap.
+# SnapMap
